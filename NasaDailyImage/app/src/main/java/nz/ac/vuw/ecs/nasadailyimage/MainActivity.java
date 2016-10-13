@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,6 +57,27 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
+
+        Button pre = (Button) findViewById(R.id.preImg);
+        pre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.print("pressed prev button");
+                findViewById(R.id.preImg)
+            }
+        });
+
+        Button next = (Button) findViewById(R.id.nextImg);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.print("pressed next button");
+            }
+        });
+    }
+
+    public void displayPreImg(View v){
+        System.out.print("dispaly imge");
     }
 
     @Override
